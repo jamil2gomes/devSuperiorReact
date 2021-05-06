@@ -1,0 +1,5 @@
+package com.devSuperior.devVendas.entities;
+
+public class Sale {
+
+}
