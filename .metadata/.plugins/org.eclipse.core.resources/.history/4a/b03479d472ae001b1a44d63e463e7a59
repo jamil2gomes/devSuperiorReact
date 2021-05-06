@@ -1,0 +1,18 @@
+package com.devSuperior.devVendas.services;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import com.devSuperior.devVendas.repositories.SellerRepository;
+import com.devSuperior.devVendas.entities.Seller;
+import java.util.List;
+
+@Service
+public class SellerService {
+	
+	@Autowired
+	private SellerRepository repo;
+	
+	public List<Seller> findAll(){
+		return repo.findAll();
+	}
+
+}

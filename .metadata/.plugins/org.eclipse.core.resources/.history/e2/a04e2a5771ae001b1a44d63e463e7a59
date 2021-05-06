@@ -1,0 +1,5 @@
+package com.devSuperior.devVendas.dto;
+
+public class SellerDTO {
+
+}
