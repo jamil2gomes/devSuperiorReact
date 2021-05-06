@@ -1,5 +1,0 @@
-package com.devSuperior.devVendas.repositories;
-
-public interface SellerRepository {
-
-}

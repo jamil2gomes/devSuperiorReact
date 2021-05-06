@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 @RestController
 @RequestMapping(value="/sellers")
-public class ServerController {
+public class SellerController {
 	
 	@Autowired
 	private SellerService service;
