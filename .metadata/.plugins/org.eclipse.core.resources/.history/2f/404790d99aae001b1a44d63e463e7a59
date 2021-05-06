@@ -1,0 +1,14 @@
+package com.devSuperior.devVendas.repositories;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import com.devSuperior.devVendas.entities.Sale;
+import com.devSuperior.devVendas.dto.SellerSumDTO;
+import java.util.List;
+
+public interface SaleRepository extends JpaRepository<Sale, Long> {
+	
+//	@Query("")
+//	List<SellerSumDTO> groupedBySeller();
+
+}

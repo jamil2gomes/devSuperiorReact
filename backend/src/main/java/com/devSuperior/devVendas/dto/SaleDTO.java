@@ -1,9 +1,11 @@
 package com.devSuperior.devVendas.dto;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import com.devSuperior.devVendas.entities.Sale;
 
-public class SaleDTO {
+public class SaleDTO implements Serializable  {
+	private static final long serialVersionUID = 1L;
 
 	private Long id;
 	private Integer visited;

@@ -12,10 +12,13 @@ public class SellerService {
 	@Autowired
 	private SellerRepository repo;
 	
+	
 	public List<SellerDTO> findAll(){
 		List<Seller> sellers =  repo.findAll();
 		
 		return sellers.stream().map(seller -> new SellerDTO(seller)).collect(Collectors.toList());
 	}
+	
+	
 
 }

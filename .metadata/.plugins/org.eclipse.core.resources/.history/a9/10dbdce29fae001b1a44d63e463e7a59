@@ -1,0 +1,23 @@
+package com.devSuperior.devVendas.controllers;
+import org.springframework.web.bind.annotation.*;
+import com.devSuperior.devVendas.dto.SaleDTO;
+import com.devSuperior.devVendas.services.SaleService;
+import org.springframework.http.*;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Page;
+
+@RestController
+@RequestMapping(value="/sales")
+public class SaleController {
+	
+	@Autowired
+	private SaleService service;
+	
+	@GetMapping
+	public ResponseEntity<Page<SaleDTO>> findAll(Pageable pageable){
+		Page<SaleDTO> sellers = service.findAll(pageable);
+		return ResponseEntity.ok(sellers);
+	}
+
+}
