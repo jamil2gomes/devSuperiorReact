@@ -30,12 +30,12 @@ export default function DonutChat() {
                     series
                 })
             } catch (error) {
-                console.log(error)
+                console.log(error);
             }
         }
         getSumSellers();
 
-    }, [])
+    }, []);
 
 
     const options = {
