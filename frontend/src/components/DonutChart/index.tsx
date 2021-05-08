@@ -1,7 +1,7 @@
-import React,{useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 import Chart from 'react-apexcharts';
 import api from 'services/api';
-import {SaleSum} from 'types/sale';
+import { SaleSum } from 'types/sale';
 
 type ChartData = {
     labels: string[];
@@ -24,7 +24,7 @@ export default function DonutChat() {
                 const data = response.data as SaleSum[];
                 const labels = data.map(vendedor => vendedor.sellerName);
                 const series = data.map(total => total.sum);
-                console.log(data)
+
                 setData({
                     labels,
                     series
@@ -34,10 +34,10 @@ export default function DonutChat() {
             }
         }
         getSumSellers();
-       
+
     }, [])
 
- 
+
     const options = {
         legend: {
             show: true
@@ -45,11 +45,11 @@ export default function DonutChat() {
     }
 
     return (
-        <Chart 
-         options={{...options, labels:data.labels, }}
-         series={data.series}
-         type="donut"
-         height={240}
+        <Chart
+            options={{ ...options, labels: data.labels, }}
+            series={data.series}
+            type="donut"
+            height={240}
         />
     )
 }
