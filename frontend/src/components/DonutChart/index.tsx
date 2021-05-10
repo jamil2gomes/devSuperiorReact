@@ -17,25 +17,17 @@ export default function DonutChat() {
 
     useEffect(() => {
 
-        const getSumSellers = async () => {
-
-            try {
-                const response = await api.get('/sales/sum-by-seller');
+        api.get('/sales/sum-by-seller')
+            .then(response => {
                 const data = response.data as SaleSum[];
                 const labels = data.map(vendedor => vendedor.sellerName);
                 const series = data.map(total => total.sum);
-
                 setData({
                     labels,
                     series
                 })
-            } catch (error) {
-                console.log(error);
-            }
-        }
-        getSumSellers();
-
-    }, []);
+            })
+    }, [setData]);
 
 
     const options = {
